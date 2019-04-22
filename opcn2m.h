@@ -91,7 +91,8 @@ bool OPCN2::on()
   // $ alpha.on()
   // $ true
   byte vals[2];
-  byte expected[] = {0xF3, 0x03};
+  // byte expected[] = {0xF3, 0x03};
+  byte expected[] = { 0xF9, 0x81 }; // This is the value that comes back when compiled for teensy
 
   digitalWrite(this->_CS, LOW);
   vals[0] = SPI.transfer(0x03);
